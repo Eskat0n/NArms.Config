@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{756B
 		sources\NArms.Config\NArms.Config.nuspec = sources\NArms.Config\NArms.Config.nuspec
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NArms.Config.Tests", "sources\NArms.Config.Tests\NArms.Config.Tests.csproj", "{14277A22-649F-46CD-8456-C1A3AAF180F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6DF2EF7B-20C5-4E09-B963-32D461A1C2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DF2EF7B-20C5-4E09-B963-32D461A1C2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DF2EF7B-20C5-4E09-B963-32D461A1C2C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14277A22-649F-46CD-8456-C1A3AAF180F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14277A22-649F-46CD-8456-C1A3AAF180F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14277A22-649F-46CD-8456-C1A3AAF180F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14277A22-649F-46CD-8456-C1A3AAF180F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

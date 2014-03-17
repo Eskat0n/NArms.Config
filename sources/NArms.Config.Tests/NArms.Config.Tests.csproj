@@ -49,7 +49,7 @@
     <Compile Include="StringPropertyReadingTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NArms.BunkerBuster\NArms.Config.csproj">
+    <ProjectReference Include="..\NArms.Config\NArms.Config.csproj">
       <Project>{6df2ef7b-20c5-4e09-b963-32d461a1c2c2}</Project>
       <Name>NArms.Config</Name>
     </ProjectReference>

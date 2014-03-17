@@ -14,8 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{281F69
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docs", ".docs", "{6C752923-3EEC-4766-8A33-189D648C3D08}"
 	ProjectSection(SolutionItems) = preProject
-		sources\NArms.Config\CHANGELOG.md = sources\NArms.Config\CHANGELOG.md
-		sources\NArms.Config\README.md = sources\NArms.Config\README.md
+		CHANGELOG.md = CHANGELOG.md
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{756B8392-570A-4DDE-A5B7-31017C1B4C73}"

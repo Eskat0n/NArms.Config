@@ -4,6 +4,13 @@
 
     internal class DefaultGuidDeserializer : IDeserializer
     {
+        private readonly bool _isNullable;
+
+        public DefaultGuidDeserializer(bool isNullable)
+        {
+            _isNullable = isNullable;
+        }
+
         public object Deserialize(string value)
         {
             try
@@ -12,7 +19,9 @@
             }
             catch
             {
-                return Guid.Empty;
+                return _isNullable
+                    ? (object) null
+                    : Guid.Empty;
             }
         }
     }

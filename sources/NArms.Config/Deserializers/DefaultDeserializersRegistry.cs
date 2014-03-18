@@ -23,7 +23,8 @@
             RegisterDeserializer<long?>(new DefaultNullableIntegerDeserializer(typeof(long?)));
             RegisterDeserializer<ulong?>(new DefaultNullableIntegerDeserializer(typeof(ulong?)));
 
-            RegisterDeserializer<Guid>(new DefaultGuidDeserializer());
+            RegisterDeserializer<Guid>(new DefaultGuidDeserializer(false));
+            RegisterDeserializer<Guid?>(new DefaultGuidDeserializer(true));
         }
     }
 }

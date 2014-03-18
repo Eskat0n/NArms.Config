@@ -16,6 +16,7 @@
             public Guid BracesGuid { get; set; }
             public Guid ParenthesesGuid { get; set; }
             public Guid EmptyGuid { get; set; }
+            public Guid? NullGuid { get; set; }
         }
 
         [SetUp]
@@ -53,6 +54,12 @@
         public void ShouldBeAbleToReadEmptyGuid()
         {
             Assert.AreEqual(Guid.Empty, _config.EmptyGuid);
+        }
+
+        [Test]
+        public void ShouldBeAbleToReadNullableEmptyGuid()
+        {
+            Assert.IsNull(_config.NullGuid);
         }
     }
 }

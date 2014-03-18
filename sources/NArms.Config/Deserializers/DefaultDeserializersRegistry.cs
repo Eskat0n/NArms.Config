@@ -20,7 +20,7 @@
             RegisterDeserializer<int?>(new DefaultNullableIntegerDeserializer(typeof(int?)));
             RegisterDeserializer<uint?>(new DefaultNullableIntegerDeserializer(typeof(uint?)));
             RegisterDeserializer<long?>(new DefaultNullableIntegerDeserializer(typeof(long?)));
-            RegisterDeserializer<ulong?>(new DefaultNullableIntegerDeserializer(typeof(ulong?)));
+            RegisterDeserializer<ulong?>(new DefaultNullableIntegerDeserializer(typeof(ulong?)));           
         }
     }
 }

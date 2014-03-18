@@ -15,6 +15,7 @@
             public Guid HyphensGuid { get; set; }
             public Guid BracesGuid { get; set; }
             public Guid ParenthesesGuid { get; set; }
+            public Guid EmptyGuid { get; set; }
         }
 
         [SetUp]
@@ -46,6 +47,12 @@
         public void ShouldBeAbleToReadParenthesesFormattedGuid()
         {
             Assert.AreEqual(_guid, _config.ParenthesesGuid);
+        }
+
+        [Test]
+        public void ShouldBeAbleToReadEmptyGuid()
+        {
+            Assert.AreEqual(Guid.Empty, _config.EmptyGuid);
         }
     }
 }

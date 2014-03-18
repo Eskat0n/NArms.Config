@@ -7,6 +7,13 @@
     {
         public object Deserialize(string value)
         {
+            var daysMatch = Match(value, "days");
+            if (daysMatch.Success)
+            {
+                var days = int.Parse(daysMatch.Groups[1].Value);
+                return TimeSpan.FromDays(days);
+            }
+
             var hoursMatch = Match(value, "hr");
             if (hoursMatch.Success)
             {

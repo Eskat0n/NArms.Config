@@ -20,6 +20,7 @@
             public TimeSpan BigMinTimeSpan { get; set; }
             public TimeSpan BigSecTimeSpan { get; set; }
             public TimeSpan BigMsecTimeSpan { get; set; }
+            public TimeSpan DaysTimeSpan { get; set; }
         }
 
         [SetUp]
@@ -106,6 +107,14 @@
             var timeSpan = new TimeSpan(0, 0, 0, 3, 180);
 
             Assert.AreEqual(timeSpan, _config.BigMsecTimeSpan);
-        }       
+        }
+
+        [Test]
+        public void ShouldBeAbleToReadDaysTimeSpanValues()
+        {
+            var timeSpan = new TimeSpan(3, 0, 0, 0);
+
+            Assert.AreEqual(timeSpan, _config.DaysTimeSpan);            
+        }
     }
 }

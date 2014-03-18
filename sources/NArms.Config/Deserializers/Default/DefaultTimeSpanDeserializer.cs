@@ -11,14 +11,21 @@
             if (hoursMatch.Success)
             {
                 var hours = int.Parse(hoursMatch.Groups[1].Value);
-                return new TimeSpan(hours, 0, 0);
+                return TimeSpan.FromHours(hours);
             }
 
             var minutesMatch = Match(value, "min");
             if (minutesMatch.Success)
             {
                 var minutes = int.Parse(minutesMatch.Groups[1].Value);
-                return new TimeSpan(0, minutes, 0);
+                return TimeSpan.FromMinutes(minutes);
+            }
+
+            var secondsMatch = Match(value, "sec");
+            if (secondsMatch.Success)
+            {
+                var seconds = int.Parse(secondsMatch.Groups[1].Value);
+                return TimeSpan.FromSeconds(seconds);
             }
 
             return TimeSpan.Parse(value);

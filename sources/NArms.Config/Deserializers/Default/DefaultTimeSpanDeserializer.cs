@@ -5,8 +5,20 @@
 
     internal class DefaultTimeSpanDeserializer : IDeserializer
     {
+        private readonly bool _isNullable;
+
+        public DefaultTimeSpanDeserializer(bool isNullable)
+        {
+            _isNullable = isNullable;
+        }
+
         public object Deserialize(string value)
         {
+            if (string.IsNullOrWhiteSpace(value))
+                return _isNullable
+                    ? (object) null
+                    : TimeSpan.Zero;
+
             var daysMatch = Match(value, "days");
             if (daysMatch.Success)
             {

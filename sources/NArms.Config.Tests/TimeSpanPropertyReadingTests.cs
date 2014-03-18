@@ -21,6 +21,7 @@
             public TimeSpan BigSecTimeSpan { get; set; }
             public TimeSpan BigMsecTimeSpan { get; set; }
             public TimeSpan DaysTimeSpan { get; set; }
+            public TimeSpan? NullableTimeSpan { get; set; }
         }
 
         [SetUp]
@@ -115,6 +116,12 @@
             var timeSpan = new TimeSpan(3, 0, 0, 0);
 
             Assert.AreEqual(timeSpan, _config.DaysTimeSpan);            
+        }
+
+        [Test]
+        public void ShouldBeAbleToReadNullableTimeSpan()
+        {
+            Assert.IsNull(_config.NullableTimeSpan);
         }
     }
 }

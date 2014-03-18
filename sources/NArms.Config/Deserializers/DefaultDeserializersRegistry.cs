@@ -26,7 +26,8 @@
             RegisterDeserializer<Guid>(new DefaultGuidDeserializer(false));
             RegisterDeserializer<Guid?>(new DefaultGuidDeserializer(true));
 
-            RegisterDeserializer<TimeSpan>(new DefaultTimeSpanDeserializer());
+            RegisterDeserializer<TimeSpan>(new DefaultTimeSpanDeserializer(false));
+            RegisterDeserializer<TimeSpan?>(new DefaultTimeSpanDeserializer(true));
         }
     }
 }

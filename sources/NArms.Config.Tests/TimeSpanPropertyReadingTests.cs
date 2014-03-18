@@ -13,6 +13,7 @@
             public TimeSpan HrMinSecTimeSpan { get; set; }
             public TimeSpan DsHrMinSecTimeSpan { get; set; }
             public TimeSpan HrTimeSpan { get; set; }
+            public TimeSpan MinTimeSpan { get; set; }
         }
 
         [SetUp]
@@ -41,9 +42,17 @@
         [Test]
         public void ShouldBeAbleToReadHrTimeSpanValues()
         {
-            var timeSpan = new TimeSpan(20, 0, 0);
+            var timeSpan = new TimeSpan(10, 0, 0);
 
             Assert.AreEqual(timeSpan, _config.HrTimeSpan);
+        }
+        
+        [Test]
+        public void ShouldBeAbleToReadMinTimeSpanValues()
+        {
+            var timeSpan = new TimeSpan(0, 20, 0);
+
+            Assert.AreEqual(timeSpan, _config.MinTimeSpan);
         }
     }
 }

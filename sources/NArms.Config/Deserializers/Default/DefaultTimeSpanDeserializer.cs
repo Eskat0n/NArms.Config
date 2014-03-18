@@ -7,14 +7,26 @@
     {
         public object Deserialize(string value)
         {
-            var match = Regex.Match(value, @"^\s*(\d+)hr\s*$");
-            if (match.Success)
+            var hoursMatch = Match(value, "hr");
+            if (hoursMatch.Success)
             {
-                var hours = int.Parse(match.Groups[1].Value);
+                var hours = int.Parse(hoursMatch.Groups[1].Value);
                 return new TimeSpan(hours, 0, 0);
             }
 
+            var minutesMatch = Match(value, "min");
+            if (minutesMatch.Success)
+            {
+                var minutes = int.Parse(minutesMatch.Groups[1].Value);
+                return new TimeSpan(0, minutes, 0);
+            }
+
             return TimeSpan.Parse(value);
+        }
+
+        private static Match Match(string input, string unit)
+        {
+            return Regex.Match(input, string.Format(@"^\s*(\d+){0}\s*$", unit));
         }
     }
 }

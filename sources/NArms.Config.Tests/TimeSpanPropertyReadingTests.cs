@@ -15,6 +15,9 @@
             public TimeSpan HrTimeSpan { get; set; }
             public TimeSpan MinTimeSpan { get; set; }
             public TimeSpan SecTimeSpan { get; set; }
+            public TimeSpan BigHrTimeSpan { get; set; }
+            public TimeSpan BigMinTimeSpan { get; set; }
+            public TimeSpan BigSecTimeSpan { get; set; }
         }
 
         [SetUp]
@@ -61,6 +64,30 @@
             var timeSpan = new TimeSpan(0, 0, 30);
 
             Assert.AreEqual(timeSpan, _config.SecTimeSpan);
+        }
+        
+        [Test]
+        public void ShouldBeAbleToReadBigHrTimeSpanValues()
+        {
+            var timeSpan = new TimeSpan(1, 1, 0, 0);
+
+            Assert.AreEqual(timeSpan, _config.BigHrTimeSpan);
+        }
+        
+        [Test]
+        public void ShouldBeAbleToReadBigMinTimeSpanValues()
+        {
+            var timeSpan = new TimeSpan(2, 20, 0);
+
+            Assert.AreEqual(timeSpan, _config.BigMinTimeSpan);
+        }
+        
+        [Test]
+        public void ShouldBeAbleToReadBigSecTimeSpanValues()
+        {
+            var timeSpan = new TimeSpan(0, 10, 25);
+
+            Assert.AreEqual(timeSpan, _config.BigSecTimeSpan);
         }
     }
 }

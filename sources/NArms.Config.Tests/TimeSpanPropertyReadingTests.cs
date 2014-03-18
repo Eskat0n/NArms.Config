@@ -10,7 +10,9 @@
 
         private class Config : ConfigBase
         {
-            public TimeSpan FullTimeSpan { get; set; }
+            public TimeSpan HrMinSecTimeSpan { get; set; }
+
+            public TimeSpan DsHrMinSecTimeSpan { get; set; }
         }
 
         [SetUp]
@@ -20,11 +22,19 @@
         }
 
         [Test]
-        public void ShouldBeAbleToReadFullTimeSpanValues()
+        public void ShouldBeAbleToReadHrMinSecTimeSpanValues()
         {
             var timeSpan = new TimeSpan(10, 20, 30);
 
-            Assert.AreEqual(timeSpan, _config.FullTimeSpan);
+            Assert.AreEqual(timeSpan, _config.HrMinSecTimeSpan);
+        }
+        
+        [Test]
+        public void ShouldBeAbleToReadDsHrMinSecTimeSpanValues()
+        {
+            var timeSpan = new TimeSpan(5, 10, 20, 30);
+
+            Assert.AreEqual(timeSpan, _config.DsHrMinSecTimeSpan);
         }
     }
 }

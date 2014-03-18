@@ -17,6 +17,8 @@
             public Guid ParenthesesGuid { get; set; }
             public Guid EmptyGuid { get; set; }
             public Guid? NullGuid { get; set; }
+            public Guid BrokenGuid { get; set; }
+            public Guid? BrokenNullableGuid { get; set; }
         }
 
         [SetUp]
@@ -60,6 +62,18 @@
         public void ShouldBeAbleToReadNullableEmptyGuid()
         {
             Assert.IsNull(_config.NullGuid);
+        }
+
+        [Test]
+        public void ShouldReturnEmptyGuidForBrokenGuid()
+        {
+            Assert.AreEqual(Guid.Empty, _config.BrokenGuid);
+        }
+        
+        [Test]
+        public void ShouldReturnNullForBrokenNullableGuid()
+        {
+            Assert.IsNull(_config.BrokenNullableGuid);
         }
     }
 }

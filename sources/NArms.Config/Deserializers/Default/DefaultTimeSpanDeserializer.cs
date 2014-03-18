@@ -28,6 +28,10 @@
                 return TimeSpan.FromSeconds(seconds);
             }
 
+            int mseconds;
+            if (int.TryParse(value, out mseconds))
+                return TimeSpan.FromMilliseconds(mseconds);
+
             return TimeSpan.Parse(value);
         }
 

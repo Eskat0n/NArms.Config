@@ -15,9 +15,11 @@
             public TimeSpan HrTimeSpan { get; set; }
             public TimeSpan MinTimeSpan { get; set; }
             public TimeSpan SecTimeSpan { get; set; }
+            public TimeSpan MsecTimeSpan { get; set; }
             public TimeSpan BigHrTimeSpan { get; set; }
             public TimeSpan BigMinTimeSpan { get; set; }
             public TimeSpan BigSecTimeSpan { get; set; }
+            public TimeSpan BigMsecTimeSpan { get; set; }
         }
 
         [SetUp]
@@ -65,6 +67,14 @@
 
             Assert.AreEqual(timeSpan, _config.SecTimeSpan);
         }
+
+        [Test]
+        public void ShouldBeAbleToReadMsecTimeSpanValues()
+        {
+            var timeSpan = new TimeSpan(0, 0, 0, 0, 580);
+
+            Assert.AreEqual(timeSpan, _config.MsecTimeSpan);
+        }
         
         [Test]
         public void ShouldBeAbleToReadBigHrTimeSpanValues()
@@ -89,5 +99,13 @@
 
             Assert.AreEqual(timeSpan, _config.BigSecTimeSpan);
         }
+
+        [Test]
+        public void ShouldBeAbleToReadBigMsecTimeSpanValues()
+        {
+            var timeSpan = new TimeSpan(0, 0, 0, 3, 180);
+
+            Assert.AreEqual(timeSpan, _config.BigMsecTimeSpan);
+        }       
     }
 }

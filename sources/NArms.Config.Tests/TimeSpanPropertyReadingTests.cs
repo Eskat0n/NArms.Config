@@ -11,8 +11,8 @@
         private class Config : ConfigBase
         {
             public TimeSpan HrMinSecTimeSpan { get; set; }
-
             public TimeSpan DsHrMinSecTimeSpan { get; set; }
+            public TimeSpan HrTimeSpan { get; set; }
         }
 
         [SetUp]
@@ -35,6 +35,15 @@
             var timeSpan = new TimeSpan(5, 10, 20, 30);
 
             Assert.AreEqual(timeSpan, _config.DsHrMinSecTimeSpan);
+        }
+        
+        
+        [Test]
+        public void ShouldBeAbleToReadHrTimeSpanValues()
+        {
+            var timeSpan = new TimeSpan(20, 0, 0);
+
+            Assert.AreEqual(timeSpan, _config.HrTimeSpan);
         }
     }
 }

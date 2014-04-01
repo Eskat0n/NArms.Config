@@ -7,9 +7,9 @@
     <authors>Eskat0n</authors>
     <owners>Eskat0n</owners>
     <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
-    <projectUrl>https://github.com/Eskat0n/NArms/tree/master/src/NArms.BunkerBuster</projectUrl>
+    <projectUrl>http://eskat0n.ru/NArms.Config</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Tiny config parsing library</description>
+    <description>Tiny configuration object binder. NArms.Config allows to read appSettings section values from .config files as regular object properties. Various validations and parsing rules can be applied on them. This library is not intended to replace Custom Sections, its only purpose is to boost development of applications with many configuration parameters and to preserve .config file consistensy when editing it manually at runtime.</description>
     <tags>Configuration EnvironmentManagement Utility NArms</tags>
   </metadata>
 </package>

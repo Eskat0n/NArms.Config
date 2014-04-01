@@ -1,5 +1,6 @@
 ﻿namespace NArms.Config.Deserializers
 {
+    using System;
     using Default;
 
     internal class DefaultDeserializersRegistry : DeserializersRegistryBase
@@ -21,6 +22,12 @@
             RegisterDeserializer<uint?>(new DefaultNullableIntegerDeserializer(typeof(uint?)));
             RegisterDeserializer<long?>(new DefaultNullableIntegerDeserializer(typeof(long?)));
             RegisterDeserializer<ulong?>(new DefaultNullableIntegerDeserializer(typeof(ulong?)));
+
+            RegisterDeserializer<Guid>(new DefaultGuidDeserializer(false));
+            RegisterDeserializer<Guid?>(new DefaultGuidDeserializer(true));
+
+            RegisterDeserializer<TimeSpan>(new DefaultTimeSpanDeserializer(false));
+            RegisterDeserializer<TimeSpan?>(new DefaultTimeSpanDeserializer(true));
         }
     }
 }

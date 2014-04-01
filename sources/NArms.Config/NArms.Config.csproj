@@ -46,6 +46,8 @@
     <Compile Include="Annotations\ConfigOptionalAttribute.cs" />
     <Compile Include="ConfigBase.cs" />
     <Compile Include="Deserializers\DefaultDeserializersRegistry.cs" />
+    <Compile Include="Deserializers\Default\DefaultTimeSpanDeserializer.cs" />
+    <Compile Include="Deserializers\Default\DefaultGuidDeserializer.cs" />
     <Compile Include="Deserializers\Default\DefaultNullableIntegerDeserializer.cs" />
     <Compile Include="Deserializers\Default\DefaultIntegerDeserializer.cs" />
     <Compile Include="Deserializers\Default\DefaultStringDeserializer.cs" />

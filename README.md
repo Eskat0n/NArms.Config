@@ -46,7 +46,7 @@ For the complete reference please look at following documentation (TODO: add lin
 
 NArms.Config is available through [NuGet](http://www.nuget.org/packages/NArms.Config), to install it simply type following line in your Package Manager Console and hit Enter:
 
-`Install-Package NArms.Config`
+    Install-Package NArms.Config
 
 Alternatively you can download both archived version and symbols for this project (TODO: add links to archives).
 

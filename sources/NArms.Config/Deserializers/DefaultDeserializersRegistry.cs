@@ -28,6 +28,8 @@
 
             RegisterDeserializer<TimeSpan>(new DefaultTimeSpanDeserializer(false));
             RegisterDeserializer<TimeSpan?>(new DefaultTimeSpanDeserializer(true));
+
+            RegisterDeserializer(x => x.IsEnum, new DefaultEnumDeserializer());
         }
     }
 }

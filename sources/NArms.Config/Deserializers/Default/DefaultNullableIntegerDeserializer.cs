@@ -13,14 +13,14 @@ namespace NArms.Config.Deserializers.Default
             _resultType = resultType;
         }
 
-        public object Deserialize(string value)
+        public object Deserialize(Type type, string value)
         {
             if (string.IsNullOrWhiteSpace(value))
                 return null;
 
             long result;
             long.TryParse(value, out result);
-          
+
             return _typeConverter.ConvertTo(result, _resultType);
         }
     }

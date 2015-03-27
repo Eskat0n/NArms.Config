@@ -13,7 +13,7 @@ namespace NArms.Config.Deserializers.Default
             _resultType = resultType;
         }
 
-        public object Deserialize(string value)
+        public object Deserialize(Type type, string value)
         {
             long result;
             long.TryParse(value, out result);

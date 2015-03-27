@@ -12,7 +12,7 @@
             _isNullable = isNullable;
         }
 
-        public object Deserialize(string value)
+        public object Deserialize(Type type, string value)
         {
             if (string.IsNullOrWhiteSpace(value))
                 return _isNullable

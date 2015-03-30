@@ -45,11 +45,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnumPropertyReadingTests.cs" />
+    <Compile Include="FlagEnumPropertyReadingTests.cs" />
     <Compile Include="GuidPropertyReadingTests.cs" />
     <Compile Include="IntegerPropertyReadingTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringPropertyReadingTests.cs" />
     <Compile Include="StubTypes\StubEnum.cs" />
+    <Compile Include="StubTypes\StubFlags.cs" />
     <Compile Include="TimeSpanPropertyReadingTests.cs" />
   </ItemGroup>
   <ItemGroup>

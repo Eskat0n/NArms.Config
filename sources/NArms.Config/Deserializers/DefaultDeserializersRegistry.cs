@@ -29,7 +29,8 @@
             RegisterDeserializer<TimeSpan>(new DefaultTimeSpanDeserializer(false));
             RegisterDeserializer<TimeSpan?>(new DefaultTimeSpanDeserializer(true));
 
-            RegisterDeserializer(x => x.IsEnum, new DefaultEnumDeserializer());
+            RegisterDeserializer(x => x.IsEnum && x.GetCustomAttributes(typeof(FlagsAttribute), false).Length == 0, new DefaultEnumDeserializer());
+            RegisterDeserializer(x => x.IsEnum && x.GetCustomAttributes(typeof(FlagsAttribute), false).Length != 0, new DefaultFlagDeserializer());
         }
     }
 }

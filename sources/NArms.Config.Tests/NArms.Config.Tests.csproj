@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BooleanPropertyReadingTests.cs" />
     <Compile Include="EnumPropertyReadingTests.cs" />
     <Compile Include="FlagEnumPropertyReadingTests.cs" />
     <Compile Include="GuidPropertyReadingTests.cs" />

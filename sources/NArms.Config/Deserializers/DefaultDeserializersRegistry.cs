@@ -7,6 +7,9 @@
     {
         internal DefaultDeserializersRegistry()
         {
+            RegisterDeserializer<bool>(new DefaultBoolDeserializer(false));
+            RegisterDeserializer<bool?>(new DefaultBoolDeserializer(true));
+
             RegisterDeserializer<string>(new DefaultStringDeserializer());
 
             RegisterDeserializer<short>(new DefaultIntegerDeserializer(typeof(short)));

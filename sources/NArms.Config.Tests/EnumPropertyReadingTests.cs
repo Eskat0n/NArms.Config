@@ -12,6 +12,7 @@
         {
             public StubEnum EnumValue { get; set; }
             public StubEnum DefaultEnumValue { get; set; }
+            public StubEnum SixthEnumValue { get; set; }
         }
 
         [SetUp]
@@ -30,6 +31,12 @@
         public void ShouldBeAbleToReadDefaultEnumValue()
         {
             Assert.AreEqual(StubEnum.ValueOne, _config.DefaultEnumValue);
+        }
+
+        [Test]
+        public void ShouldBeAbleToReadNumericEnumValue()
+        {
+            Assert.AreEqual(StubEnum.ValueSix, _config.SixthEnumValue);
         }
     }
 }

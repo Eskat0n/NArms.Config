@@ -3,6 +3,7 @@
     public enum StubEnum
     {
         ValueOne,
-        ValueTwo
+        ValueTwo,
+        ValueSix = 6
     }
 }

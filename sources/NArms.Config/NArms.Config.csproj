@@ -55,6 +55,7 @@
     <Compile Include="Deserializers\Default\DefaultIntegerDeserializer.cs" />
     <Compile Include="Deserializers\Default\DefaultStringDeserializer.cs" />
     <Compile Include="Deserializers\DeserializersRegistryBase.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="IDeserializer.cs" />
     <Compile Include="IDeserializersRegistry.cs" />
     <Compile Include="Extensions\NameValueCollectionExtensions.cs" />

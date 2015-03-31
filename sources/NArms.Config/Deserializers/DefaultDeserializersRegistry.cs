@@ -2,6 +2,7 @@
 {
     using System;
     using Default;
+    using Extensions;
 
     internal class DefaultDeserializersRegistry : DeserializersRegistryBase
     {
@@ -32,8 +33,21 @@
             RegisterDeserializer<TimeSpan>(new DefaultTimeSpanDeserializer(false));
             RegisterDeserializer<TimeSpan?>(new DefaultTimeSpanDeserializer(true));
 
-            RegisterDeserializer(x => x.IsEnum && x.GetCustomAttributes(typeof(FlagsAttribute), false).Length == 0, new DefaultEnumDeserializer());
-            RegisterDeserializer(x => x.IsEnum && x.GetCustomAttributes(typeof(FlagsAttribute), false).Length != 0, new DefaultFlagDeserializer());
+            RegisterDeserializer(x => x.IsEnum &&
+                                      x.GetCustomAttributes(typeof (FlagsAttribute), false).Length == 0,
+                                 new DefaultEnumDeserializer(false));
+            RegisterDeserializer(x => x.IsNullable() &&
+                                      x.GetNullableType().IsEnum &&
+                                      x.GetNullableType().GetCustomAttributes(typeof (FlagsAttribute), false).Length == 0,
+                                 new DefaultEnumDeserializer(true));
+
+            RegisterDeserializer(x => x.IsEnum &&
+                                      x.GetCustomAttributes(typeof (FlagsAttribute), false).Length != 0,
+                                 new DefaultFlagDeserializer(false));
+            RegisterDeserializer(x => x.IsNullable() &&
+                                      x.GetNullableType().IsEnum &&
+                                      x.GetNullableType().GetCustomAttributes(typeof(FlagsAttribute), false).Length != 0,
+                                 new DefaultFlagDeserializer(true));
         }
     }
 }

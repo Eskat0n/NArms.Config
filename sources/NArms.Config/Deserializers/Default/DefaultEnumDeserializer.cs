@@ -6,15 +6,28 @@
     {
         private const string DefaultValueSubstitute = "@Default";
 
-        public DefaultEnumDeserializer()
+        private readonly bool _isNullable;
+
+        public DefaultEnumDeserializer(bool isNullable)
         {
+            _isNullable = isNullable;
         }
 
         public object Deserialize(Type type, string value)
         {
-            if (value == DefaultValueSubstitute)
-                return Activator.CreateInstance(type);
-            return Enum.Parse(type, value);
+            try
+            {
+                if (value == DefaultValueSubstitute)
+                    return Activator.CreateInstance(type);
+
+                return Enum.Parse(type, value);
+            }
+            catch (Exception)
+            {
+                return _isNullable
+                    ? null
+                    : Activator.CreateInstance(type);
+            }
         }
     }
 }

@@ -11,7 +11,7 @@
             _isNullable = isNullable;
         }
 
-        public object Deserialize(string value)
+        public object Deserialize(Type type, string value)
         {
             try
             {

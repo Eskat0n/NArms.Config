@@ -46,12 +46,16 @@
     <Compile Include="Annotations\ConfigOptionalAttribute.cs" />
     <Compile Include="ConfigBase.cs" />
     <Compile Include="Deserializers\DefaultDeserializersRegistry.cs" />
+    <Compile Include="Deserializers\Default\DefaultBoolDeserializer.cs" />
+    <Compile Include="Deserializers\Default\DefaultEnumDeserializer.cs" />
+    <Compile Include="Deserializers\Default\DefaultFlagDeserializer.cs" />
     <Compile Include="Deserializers\Default\DefaultTimeSpanDeserializer.cs" />
     <Compile Include="Deserializers\Default\DefaultGuidDeserializer.cs" />
     <Compile Include="Deserializers\Default\DefaultNullableIntegerDeserializer.cs" />
     <Compile Include="Deserializers\Default\DefaultIntegerDeserializer.cs" />
     <Compile Include="Deserializers\Default\DefaultStringDeserializer.cs" />
     <Compile Include="Deserializers\DeserializersRegistryBase.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="IDeserializer.cs" />
     <Compile Include="IDeserializersRegistry.cs" />
     <Compile Include="Extensions\NameValueCollectionExtensions.cs" />

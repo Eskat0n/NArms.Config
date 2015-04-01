@@ -1,7 +1,9 @@
 namespace NArms.Config
 {
+    using System;
+
     public interface IDeserializer
     {
-        object Deserialize(string value);
+        object Deserialize(Type type, string value);
     }
 }

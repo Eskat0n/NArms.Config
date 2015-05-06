@@ -1,7 +1,7 @@
 ﻿# NArms.Config
 
-[![Build status](https://ci.appveyor.com/api/projects/status/s7me5u8cfiw2mrrk)](https://ci.appveyor.com/project/Eskat0n/narms-config)
-[![NuGet](https://img.shields.io/nuget/dt/NArms.Config.svg)](http://www.nuget.org/packages/NArms.Config)
+[![Build status](https://img.shields.io/appveyor/ci/eskat0n/narms-config.svg)](https://ci.appveyor.com/project/Eskat0n/narms-config)
+[![NuGet package downloads](https://img.shields.io/nuget/dt/NArms.Config.svg)](http://www.nuget.org/packages/NArms.Config)
 
 ## What is this?
 
